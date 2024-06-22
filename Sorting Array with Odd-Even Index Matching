@@ -1,0 +1,12 @@
+def sort_array(nums):
+    odd_nums = sorted([num for num in nums if num % 2 != 0])
+    even_nums = sorted([num for num in nums if num % 2 == 0])
+    
+    sorted_nums = [0] * len(nums)
+    sorted_nums[::2] = even_nums
+    sorted_nums[1::2] = odd_nums
+    
+    return sorted_nums
+nums = [4, 2, 5, 7]
+result = sort_array(nums)
+print(result)
