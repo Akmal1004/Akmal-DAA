@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[] = "random";
+    char substr[] = "an";
+    char *position = strstr(str, substr);
+
+    if (position != NULL) {
+        int pos = position - str;
+        printf("Substring found at position: %d\n", pos);
+    } else {
+        printf("Substring not found\n");
+    }
+    return 0;
+}
