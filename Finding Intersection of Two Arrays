@@ -1,0 +1,5 @@
+array1 = [1, 2, 3, 4, 5]
+array2 = [3, 4, 5, 6, 7]
+intersection = set(array1).intersection(array2)
+intersection_list = list(intersection)
+print(intersection_list)
