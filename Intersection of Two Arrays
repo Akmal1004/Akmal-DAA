@@ -1,0 +1,12 @@
+def find_intersection(nums1, nums2):
+    set1 = set(nums1)
+    set2 = set(nums2)
+    intersection = list(set1 & set2)
+    result = []
+    for num in intersection:
+        count = min(nums1.count(num), nums2.count(num))
+        result.extend([num] * count)
+    return result
+nums1 = [1, 2, 2, 1]
+nums2 = [2, 2]
+print(find_intersection(nums1, nums2))  # Output: [2, 2]
